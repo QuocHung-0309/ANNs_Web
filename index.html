@@ -101,8 +101,8 @@ table{min-width:520px}th{background:#edf2eb;color:var(--navy)}
 <section id="teacher" class="hidden">
  <div class="card"><h2>🧑‍🏫 Dashboard giáo viên</h2><p class="muted">Điều khiển vòng chơi và theo dõi dữ liệu nhận được từ các thiết bị học sinh.</p>
   <div class="statgrid"><div class="stat"><strong id="tRound">—</strong><span>Vòng chơi</span></div><div class="stat"><strong id="tPicked">0/4</strong><span>Từ khóa đã gửi</span></div><div class="stat"><strong id="tGuess">—</strong><span>Đáp án</span></div></div>
-  <div class="row" style="margin-top:12px"><div class="field"><label>Đáp án vòng 1</label><input id="answer1" value="Cầu Vàng – Bà Nà Hills"></div><div class="field"><label>Đáp án vòng 2</label><input id="answer2" value="Bà Nà Hills – Cầu Vàng"></div></div>
-  <div class="bar actions"><button class="primary" id="start1">▶ Bắt đầu vòng 1</button><button class="good" id="reveal">👁 Công bố đáp án</button><button class="dark" id="start2">↻ Bắt đầu vòng 2</button><button class="outline" id="resetRoom">Làm mới phòng</button></div>
+  <div class="row" style="margin-top:12px"><div class="field"><label>Đáp án ảnh 1</label><input id="answer1" placeholder="Tên chủ đề / bức tranh"></div><div class="field"><label>Đáp án ảnh 2</label><input id="answer2" placeholder="Cùng chủ đề với ảnh 1"></div></div>
+  <div class="bar actions"><button class="primary" id="start1">▶ Bắt đầu với ảnh 1</button><button class="good" id="reveal">👁 Công bố ảnh và đáp án</button><button class="dark" id="start2">▶ Thử lại với ảnh 2</button><button class="outline" id="resetRoom">Làm mới phòng</button></div>
   <div id="teacherMsg" class="notice">Kết nối phòng để bắt đầu.</div>
  </div>
  <div class="card"><h3>Trạng thái truyền tin</h3><div class="flow"><div class="flowbox">1 👀<b>Đầu vào</b><div id="dashWords" class="muted">Chưa có dữ liệu</div></div><div class="flowbox">2 🧩<b>Lớp ẩn</b><div id="dashClues" class="muted">Chưa có dữ liệu</div></div><div class="flowbox">3 🎯<b>Đầu ra</b><div id="dashGuess" class="muted">Chưa có dữ liệu</div></div><div class="flowbox">4 🔍<b>Phản hồi</b><div id="dashFeedback" class="muted">Chưa có dữ liệu</div></div></div></div>
@@ -198,4 +198,5 @@ $("reveal").onclick=async()=>{if(!localData||!localData.round){$("teacherMsg").t
 $("saveFeedback").onclick=()=>roomRef.update({feedback:$("teacherFeedback").value.trim()});
 $("resetRoom").onclick=async()=>{if(confirm("Xóa tiến trình hiện tại của phòng này?"))await roomRef.set({round:0,revealed:false,answers:{1:$("answer1").value.trim(),2:$("answer2").value.trim()},rounds:{},feedback:"",updatedAt:Date.now()})};
 </script>
+<script src="activity-workflow.js"></script>
 </body></html>

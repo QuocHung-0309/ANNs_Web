@@ -42,11 +42,13 @@ Không mở file trực tiếp bằng `file://` nếu trình duyệt chặn mộ
 1. Mở URL trên 5 thiết bị.
 2. Nhập cùng mã phòng, ví dụ `BANHA01`.
 3. Một thiết bị chọn `Giáo viên – Dashboard`; 4 thiết bị còn lại chọn từng vai trò.
-4. Giáo viên bấm **Bắt đầu vòng 1**.
-5. Lớp đầu vào chọn 4 thẻ và bấm chuyển; Lớp ẩn nhập 2 gợi ý và chuyển; Lớp đầu ra chốt đáp án; Nhóm phản hồi ghi nhận phân tích.
-6. Giáo viên công bố đáp án và bấm bắt đầu vòng 2.
+4. Giáo viên kết nối Dashboard. Hai ảnh `VÒNG 1.jpg` và `VÒNG 2.jpg`, cùng bộ thẻ tương ứng, được nạp sẵn. Có thể sửa ảnh, đáp án và từ khóa trong Dashboard.
+5. Bấm **Lưu ảnh, bộ thẻ và trọng số**, sau đó **Bắt đầu với ảnh 1**. Lớp đầu vào chọn 4 thẻ; Lớp ẩn tạo 2 cụm gợi ý; Lớp đầu ra chốt đáp án.
+6. Giáo viên công bố ảnh và đáp án. Cả lớp dò ngược lại các từ khóa/gợi ý; giáo viên đánh dấu từ đặc trưng là **Bắt buộc ưu tiên** và từ nhiễu là **Loại bỏ ở vòng 2**.
+7. Lưu điều chỉnh rồi bấm **Thử lại với ảnh 2**. Từ ưu tiên được chọn sẵn và khóa lựa chọn; từ bị loại không xuất hiện cho Lớp đầu vào.
 
 ## Lưu ý
-- Ảnh thẻ từ khóa Cầu Vàng đã được nhúng vào HTML.
+- Trên màn hình học sinh, ảnh được cắt còn phần tranh chính để không lộ bảng đáp án in ở dưới. Dashboard giáo viên vẫn xem được toàn bộ ảnh.
+- Hai từ được ưu tiên sẵn cho vòng 2 là **Đèn lồng** và **Phố cổ**; giáo viên có thể thay đổi trọng số sau phần phân tích vòng 1.
 - Firebase SDK được tải từ CDN, do đó thiết bị cần có Internet.
 - Dùng mã phòng riêng cho mỗi tiết học. Không chia sẻ mã phòng ra ngoài lớp.
